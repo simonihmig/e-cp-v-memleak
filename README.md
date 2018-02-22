@@ -1,57 +1,31 @@
 # e-cp-v-memleak
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Reproduction of a memory leak issue in `ember-cp-validations: https://github.com/offirgolan/ember-cp-validations/issues/485
 
-## Prerequisites
+## Not leaking
 
-You will need the following things properly installed on your computer.
+The simple `no-leak` component does not use a validation mixin. And visiting a page with this component and going 
+somehwere else does not cause a memory leak. Steps to reproduce:
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+* Run the 'no leak' acceptance test
+* Create a heap snapshot in Chrome
 
-## Installation
+There is no `Container` instance left:
 
-* `git clone <repository-url>` this repository
-* `cd e-cp-v-memleak`
-* `yarn install`
+![noleak](docs/noleak.png)
 
-## Running / Development
+## Memory leak
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+The  `memory-leak` component *does* use a validation mixin. And visiting a page with this component and going 
+somehwere else causes a memory leak. Steps to reproduce:
 
-### Code Generators
+* Run the 'leak' acceptance test
+* Create a heap snapshot in Chrome
 
-Make use of the many generators for code, try `ember help generate` for more details
+There is a `Container` instance left:
 
-### Running Tests
+![leak](docs/leak.png)
 
-* `ember test`
-* `ember test --server`
+Also you can see the component instance (ES6 class `MemoryLeak`) not being GCed:
 
-### Linting
-
-* `yarn lint:js`
-* `yarn lint:js --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+![leak2](docs/leak2.png)

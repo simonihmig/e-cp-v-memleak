@@ -1922,7 +1922,7 @@ ember-cli-app-version@^3.0.0:
     ember-cli-babel "^6.8.0"
     git-repo-version "^1.0.0"
 
-ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.0.0-beta.9, ember-cli-babel@^6.10.0, ember-cli-babel@^6.11.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.0, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0:
+ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.10.0, ember-cli-babel@^6.11.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.0, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0, ember-cli-babel@^6.9.2:
   version "6.11.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.11.0.tgz#79cb184bac3c05bfe181ddc306bac100ab1f9493"
   dependencies:
@@ -1981,16 +1981,6 @@ ember-cli-htmlbars-inline-precompile@^1.0.0:
     hash-for-dep "^1.0.2"
     heimdalljs-logger "^0.1.7"
     silent-error "^1.1.0"
-
-ember-cli-htmlbars@^1.0.3:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-1.3.4.tgz#461289724b34af372a6a0c4b6635819156963353"
-  dependencies:
-    broccoli-persistent-filter "^1.0.3"
-    ember-cli-version-checker "^1.0.2"
-    hash-for-dep "^1.0.2"
-    json-stable-stringify "^1.0.0"
-    strip-bom "^2.0.0"
 
 ember-cli-htmlbars@^2.0.1:
   version "2.0.3"
@@ -2092,12 +2082,6 @@ ember-cli-valid-component-name@^1.0.0:
   dependencies:
     silent-error "^1.0.0"
 
-ember-cli-version-checker@^1.0.2:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-1.3.1.tgz#0bc2d134c830142da64bf9627a0eded10b61ae72"
-  dependencies:
-    semver "^5.3.0"
-
 ember-cli-version-checker@^2.0.0, ember-cli-version-checker@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-2.1.0.tgz#fc79a56032f3717cf844ada7cbdec1a06fedb604"
@@ -2192,6 +2176,15 @@ ember-cli@~3.0.0:
     watch-detector "^0.1.0"
     yam "0.0.22"
 
+ember-cp-validations@offirgolan/ember-cp-validations#master:
+  version "3.5.1"
+  resolved "https://codeload.github.com/offirgolan/ember-cp-validations/tar.gz/a161318fdc3b44365a144427d8a00f3aafa297aa"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-version-checker "^2.0.0"
+    ember-require-module "^0.2.0"
+    ember-validators "^1.1.1"
+
 ember-data@~3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.0.1.tgz#555bddde064c72ff9dde4ae4c8c635afe8158b8b"
@@ -2226,12 +2219,6 @@ ember-data@~3.0.0:
     semver "^5.1.0"
     silent-error "^1.0.0"
 
-ember-export-application-global@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ember-export-application-global/-/ember-export-application-global-2.0.0.tgz#8d6d7619ac8a1a3f8c43003549eb21ebed685bd2"
-  dependencies:
-    ember-cli-babel "^6.0.0-beta.7"
-
 ember-inflector@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-2.1.0.tgz#afcb92d022a4eab58f08ff4578eafc3a1de2d09b"
@@ -2264,6 +2251,12 @@ ember-qunit@^3.3.2:
     ember-cli-babel "^6.3.0"
     ember-cli-test-loader "^2.2.0"
     qunit "^2.5.0"
+
+ember-require-module@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-require-module/-/ember-require-module-0.2.0.tgz#eafe436737ead4762220a9166b78364abf754274"
+  dependencies:
+    ember-cli-babel "^6.9.2"
 
 ember-resolver@^4.0.0:
   version "4.5.0"
@@ -2298,9 +2291,9 @@ ember-runtime-enumerable-includes-polyfill@^2.0.0:
     ember-cli-babel "^6.9.0"
     ember-cli-version-checker "^2.1.0"
 
-ember-source@~3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.0.0.tgz#51811cae98d2ceec53bcfbaa876d02b2b5b2159f"
+ember-source@~2.18.2:
+  version "2.18.2"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-2.18.2.tgz#75d00eef5488bfe504044b025c752ba924eaf87f"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
@@ -2309,6 +2302,7 @@ ember-source@~3.0.0:
     ember-cli-normalize-entity-name "^1.0.0"
     ember-cli-path-utils "^1.0.0"
     ember-cli-string-utils "^1.1.0"
+    ember-cli-test-info "^1.0.0"
     ember-cli-valid-component-name "^1.0.0"
     ember-cli-version-checker "^2.1.0"
     ember-router-generator "^1.2.3"
@@ -2316,13 +2310,12 @@ ember-source@~3.0.0:
     jquery "^3.2.1"
     resolve "^1.3.3"
 
-ember-welcome-page@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/ember-welcome-page/-/ember-welcome-page-3.1.1.tgz#dead338443f24257c552bfa83ca84b0704b6c184"
+ember-validators@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ember-validators/-/ember-validators-1.1.1.tgz#34b06f7c4bde4e57c30cb9dfc6566647c1c140c1"
   dependencies:
-    broccoli-funnel "^1.0.1"
-    ember-cli-babel "^6.0.0-beta.9"
-    ember-cli-htmlbars "^1.0.3"
+    ember-cli-babel "^6.9.2"
+    ember-require-module "^0.2.0"
 
 encodeurl@~1.0.1:
   version "1.0.2"

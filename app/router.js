@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('leak');
+  this.route('no-leak');
 });
 
 export default Router;
